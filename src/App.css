@@ -2,97 +2,37 @@
   text-align: center;
 }
 
-/* table css to line up inputs in columns on the same row */
-
-.table {
-  display: table;
-  width: 100%;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-.table-row {
-  display: table-row;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
-.table-row>*:not(:last-child) {
-  padding-right: 20px;
-}
-
-.table-cell {
-  display: table-cell;
-}
-
-/* css for inputs and their wrapper elements */
-
-.form-wrapper {
-  margin: 2% 20%;
-  padding: 2% 4%;
-  border: 1px solid gray;
-  border-radius: 5px;
-}
-
-label {
-  font-size: 14px;
-}
-
-input,
-select,
-textarea {
-  font-size: 16px;
-  margin-top: 3px;
-  padding: 5px;
-  border: 1.2px solid gray;
-  box-sizing: border-box;
-}
-
-.input-wrapper {
-  text-align: left;
-}
-
-.form-control {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.form-select {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.required-star {
-  color: red;
-}
-
-/* button css */
-
-.btn {
-  font-size: 16px;
-  background-color: #006ba8;
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
   color: white;
-  width: 25%;
-  padding: 1% 0;
-  border-radius: 5px;
-  border: none;
 }
 
-/* responsive css */
+.App-link {
+  color: #61dafb;
+}
 
-@media screen and (max-width: 700px) {
-  .column {
-    width: 100%;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-
-  .table,
-  .table-row,
-  .table-cell {
-    display: block;
-  }
-
-  .table-row>*:not(:last-child) {
-    padding-right: 0;
-  }
-
-  .form-wrapper {
-    margin: 2% 4%;
-    padding: 2% 4%;
+  to {
+    transform: rotate(360deg);
   }
 }
