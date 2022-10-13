@@ -1,0 +1,88 @@
+[
+    [
+        {
+            "id": "firstName",
+            "name": "First Name",
+            "placeholder": "First name",
+            "required": true,
+            "type": "text",
+            "ind": 0
+        },
+        {
+            "id": "lastName",
+            "name": "Last Name",
+            "placeholder": "Last name",
+            "required": true,
+            "type": "text",
+            "ind": 1
+        }
+    ],
+    {
+        "id": "email",
+        "name": "Email",
+        "placeholder": "abc@123.com",
+        "required": true,
+        "type": "text",
+        "ind": 2
+    },
+    {
+        "id": "address1",
+        "name": "Address 1",
+        "placeholder": "Address 1",
+        "type": "text",
+        "ind": 3
+    },
+    [
+        {
+            "id": "city",
+            "name": "City",
+            "placeholder": "City",
+            "type": "text",
+            "ind": 4
+        },
+        {
+            "id": "state",
+            "name": "State",
+            "placeholder": "State",
+            "type": "text",
+            "ind": 5
+        },
+        {
+            "id": "zip",
+            "name": "Zip",
+            "placeholder": "Zip",
+            "type": "text",
+            "ind": 6
+        }
+    ],
+    {
+        "id": "phone",
+        "name": "Phone",
+        "placeholder": "555-555-5555",
+        "required": true,
+        "type": "text",
+        "ind": 7
+    },
+    {
+        "id": "jobTitle",
+        "name": "Job Title",
+        "options": [
+            "Engineer - Lead",
+            "Engineer - Mid Level",
+            "Engineer - Junior",
+            "Engineer - Front End Focused",
+            "Engineer - Backend Focused",
+            "Engineer - Full Stack"
+        ],
+        "placeholder": "Please select job title",
+        "type": "select",
+        "ind": 8
+    },
+    {
+        "id": "reason",
+        "name": "Reason",
+        "placeholder": "Describe why you are a good fit for the job you are applying for.",
+        "type": "textarea",
+        "ind": 9
+    }
+]
