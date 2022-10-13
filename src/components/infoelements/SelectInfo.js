@@ -1,6 +1,7 @@
 import React from 'react'
 
-const SelectInput = (props) => {
+//Element for the select info (post submission)
+const SelectInfo = (props) => {
     return (
         <div className="input-wrapper">
             <label>{props.field.name}:</label>
@@ -14,4 +15,4 @@ const SelectInput = (props) => {
     )
 }
 
-export default SelectInput;
+export default SelectInfo;

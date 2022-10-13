@@ -1,7 +1,7 @@
 import React from 'react';
 
+//Element for the text info (post submission)
 const TextInput = (props) => {
-
     return (
         <div className="input-wrapper">
             <label>{props.field.name}:</label>

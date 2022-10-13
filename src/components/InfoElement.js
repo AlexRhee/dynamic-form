@@ -5,6 +5,7 @@ import SelectInfo from './infoelements/SelectInfo';
 
 const Element = (props) => {
 
+    //Use the field type to determine which type of input to use
     switch (props.field.type) {
         case 'text':
             return (<TextInfo
@@ -21,11 +22,11 @@ const Element = (props) => {
         default:
             break;
     }
-return (
-    <div>
-        element
-    </div>
-)
+    return (
+        <div>
+            element
+        </div>
+    )
 
 }
 

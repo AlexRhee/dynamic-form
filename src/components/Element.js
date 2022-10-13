@@ -2,10 +2,10 @@ import React from 'react'
 import TextInput from './elements/TextInput';
 import TextAreaInput from './elements/TextAreaInput';
 import SelectInput from './elements/SelectInput';
-//import field from './Field'
 
 const Element = (props) => {
 
+    //Use the field type to determine which type of input to use
     switch (props.field.type) {
         case 'text':
             return (<TextInput

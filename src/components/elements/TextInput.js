@@ -1,7 +1,9 @@
 import React, {useContext} from 'react';
 import {FormContext} from '../../FormContext';
 
+//Element for simple text input
 const TextInput = (props) => {
+    //Pull in functions and seed state via FormContext
     const { handleChange, handleBlur, seed } = useContext(FormContext);
 
     return (

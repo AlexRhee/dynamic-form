@@ -1,5 +1,6 @@
 import React from 'react'
 
+//Element for select input
 const SelectInput = (props) => {
     return (
         <div className="input-wrapper">
