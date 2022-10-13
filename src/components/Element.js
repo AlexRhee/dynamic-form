@@ -5,7 +5,7 @@ import SelectInput from './elements/SelectInput';
 
 const Element = (props) => {
 
-    //Use the field type to determine which type of input to use
+    //Use the field type to determine which type of input to use, pass in the field to the child component (input)
     switch (props.field.type) {
         case 'text':
             return (<TextInput

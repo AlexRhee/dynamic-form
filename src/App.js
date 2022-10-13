@@ -19,6 +19,7 @@ function App() {
   //Validation variable
   let valid = true;
 
+  //Function for the submit button logic that will run field validation on all fields and will not allow submission unless all fields pass
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -55,6 +56,7 @@ function App() {
     }
   }
 
+  //Function to reset the form after submission, will remove all existing values and change the submission state
   const handleReset = () => {
     elements.forEach(ele => {
       if (Array.isArray(ele)) {
@@ -71,6 +73,7 @@ function App() {
     setSubmitting(prevState => !prevState)
   }
 
+  //Function to handle the on change event for inputs, will update the elements state
   const handleChange = (ind, event) => {
 
     const newElements = [...elements]
@@ -91,6 +94,7 @@ function App() {
     });
   }
 
+  //Function to handle the on blur event for inputs, will run field validation and mark fields as invalid if they fail
   const handleBlur = (ind, event) => {
     const newElements = [...elements]
     newElements.forEach(field => {
@@ -117,6 +121,7 @@ function App() {
     })
   }
 
+  //Field validation function that is called from the handleBlur and handleSubmission functions
   const fieldValidation = (required, id, value, type) => {
     if (id === 'email' && (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value))) {
       return false;
