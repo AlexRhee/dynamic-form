@@ -1,70 +1,18 @@
-# Getting Started with Create React App
+Dynamic Application Form - created with React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Form will take in JSON information, located in the inputFields.json file found in the src folder. Fields can be added by adding entries in the JSON file following the existing format. Fields that are added within their own sub array will display within the same row as columns of that row. Existing examples are First Name, Last Name as well as City, State, Zip.
 
-## Available Scripts
+Validation for any field that has their required property set to true. Validation can also be added to select and textarea inputs.
+If a field fails validation, via onBlur or clicking Submit, the field will change color to red and the user will not be able to proceed to the 'Thank You' screen. Custom validation for Email and Phone numbers added.
 
-In the project directory, you can run:
+The form is mobile responsive and will convert to a uniform 1 column form at a width of 700px or less and this includes fields that appear as columns on the same row when in desktop view.
 
-### `npm start`
+Tabbing and accessibility text have been added to the fields as well as the buttons. Tabbing will not work once the form is submitted as the fields will be disabled at that point.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Styling has been done with custom CSS without the use of styling frameworks.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Unit testing has been added for 3 of the post submission inputs.
 
-### `npm test`
+Unfortunately I was unable to implement Redux in the application due to my lack of experience with the framework. I tried adding it in after the fact but the code was starting to get a bit messy so I opted to revert back to my original state management implementation. I think if I had tried to use Redux from the get go I could have implemented it as I do have a better idea of using store, reducer, store dispatch and actions to manage state after reading the documentation and giving it a try.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Overall it was a fun challenge!
