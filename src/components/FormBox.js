@@ -10,17 +10,17 @@ export default function FormBox(props) {
         if (Array.isArray(el)) {
             //Add arrayed fields to the same row in columns
             return <div key={i} className="table-wrapper table"><div className="table-row">{el.map((elem, i) =>
-                <div className="table-cell" key={i}><Element field={elem}/></div>
+                <div className="table-cell" key={i}><Element field={elem} /></div>
             )}</div></div>
         } else {
             //Non arrayed fields added in their own row
-            return <div key={i}><Element field={el}/></div>
+            return <div key={i}><Element field={el} /></div>
         }
     }) : null;
 
 
     return (
-        <form onSubmit={props.handleSubmit} className="form-wrapper">
+        <form data-testid="formbox-1"  onSubmit={props.handleSubmit} className="form-wrapper">
             {inputElements}
             <button className="btn">Submit</button>
         </form>

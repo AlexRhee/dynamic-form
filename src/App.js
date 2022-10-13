@@ -5,8 +5,6 @@ import FormBox from './components/FormBox'
 import InformationBox from './components/InformationBox'
 import { FormContext } from './FormContext'
 
-console.log(inputFields);
-
 function App() {
 
   const [elements, setElements] = useState(inputFields);
@@ -24,13 +22,14 @@ function App() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    //reset the valid var to true prior to running validation
     valid = true;
 
     //Loop through all the elements to determine if required fields have been entered correctly
     elements.forEach(ele => {
       if (Array.isArray(ele)) {
         ele.forEach(el => {
-          if (fieldValidation(el.required, el.id, el.value) === false) {
+          if (fieldValidation(el.required, el.id, el.value, el.type) === false) {
             el.invalid = true;
             valid = false;
           } else {
@@ -38,7 +37,7 @@ function App() {
           }
         })
       } else {
-        if (fieldValidation(ele.required, ele.id, ele.value) === false) {
+        if (fieldValidation(ele.required, ele.id, ele.value, ele.type) === false) {
           ele.invalid = true;
           valid = false;
         } else {
@@ -98,7 +97,7 @@ function App() {
       if (Array.isArray(field)) {
         field.forEach(el => {
           if (ind === el.id) {
-            if (fieldValidation(el.required, el.id, event.target.value) === false) {
+            if (fieldValidation(el.required, el.id, event.target.value, el.type) === false) {
               el.invalid = true;
             } else {
               el.invalid = false;
@@ -107,7 +106,7 @@ function App() {
         })
       } else {
         if (ind === field.id) {
-          if (fieldValidation(field.required, field.id, event.target.value) === false) {
+          if (fieldValidation(field.required, field.id, event.target.value, field.type) === false) {
             field.invalid = true;
           } else {
             field.invalid = false;
@@ -118,10 +117,12 @@ function App() {
     })
   }
 
-  const fieldValidation = (required, id, value) => {
+  const fieldValidation = (required, id, value, type) => {
     if (id === 'email' && (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value))) {
       return false;
     } else if (id === 'phone' && (!/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/i.test(value))) {
+      return false;
+    } else if (required && type === 'select' && value === '0') {
       return false;
     } else if (required && (!value || value.trim === '')) {
       return false;
